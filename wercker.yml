@@ -1,0 +1,10 @@
+box: ubuntu
+build:
+  steps:
+    - internal/docker-run:
+      image: gauravaagnihotri/test
+      name: rotate_cert
+      username: $DOCKER_USERNAME
+      password: $DOCKER_PASSWORD
+      registry: $DOCKER_RGISTRY
+      env: "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY  AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION"
